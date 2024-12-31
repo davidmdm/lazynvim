@@ -12,3 +12,7 @@ vim.api.nvim_create_autocmd("TermEnter", {
     vim.keymap.set("t", "<c-l>", "<c-l>", { buffer = ev.buf, nowait = true })
   end,
 })
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+  virtual_text = false,
+})

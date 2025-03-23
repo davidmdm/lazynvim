@@ -20,6 +20,10 @@ return {
         zls = {
           enable_build_on_save = true,
         },
+        gopls = {
+          analyses = {},
+        },
+        cue = {},
       },
     },
   },

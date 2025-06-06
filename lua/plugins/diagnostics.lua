@@ -8,9 +8,15 @@ return {
         options = {
           multilines = {
             enabled = true,
+            always_show = true,
+          },
+          virt_texts = {
+            -- Priority for virtual text display
+            priority = 8096,
           },
         },
       })
+      vim.diagnostic.config({ virtual_text = false }) -- Only if needed in your configuration, if you already have native LSP diagnostics
     end,
   },
 }

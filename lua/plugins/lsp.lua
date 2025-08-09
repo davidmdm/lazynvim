@@ -24,6 +24,13 @@ return {
           analyses = {},
         },
         cue = {},
+        yamlls = {
+          settings = {
+            yaml = {
+              customTags = { "!lock", "!local" },
+            },
+          },
+        },
       },
     },
   },

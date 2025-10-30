@@ -1,25 +1,20 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    opts = function()
-      local keys = require("lazyvim.plugins.lsp.keymaps").get()
-
-      for _, value in ipairs(keys) do
-        if value[1] == "<c-k>" then
-          value[1] = "<leader>sh"
-          break
-        end
-      end
-    end,
-  },
-  {
-    "neovim/nvim-lspconfig",
     opts = {
       diagnostics = {
         virtual_text = false,
       },
       inlay_hints = { enabled = false },
+      codelens = {
+        enabled = false,
+      },
       servers = {
+        ["*"] = {
+          keys = {
+            { "<c-k>", false, mode = "i" },
+          },
+        },
         zls = {
           enable_build_on_save = true,
         },

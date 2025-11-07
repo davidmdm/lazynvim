@@ -65,3 +65,5 @@ require("lazy").setup({
     },
   },
 })
+
+vim.lsp.enable("cue")

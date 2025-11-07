@@ -14,6 +14,7 @@ return {
         json5 = { "prettier" },
         html = { "prettier" },
         go = { "goimports", "gofumpt" },
+        cue = { "cue_fmt" },
       },
     }
     return opts

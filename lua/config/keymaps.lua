@@ -15,3 +15,5 @@ vim.keymap.set("i", "<C-k>", "<Up>", { desc = "Move up" })
 vim.keymap.set("i", "<C-l>", "<Right>", { desc = "Move right" })
 
 vim.keymap.set("t", "<C-x>", [[<C-\><C-n>]])
+
+vim.keymap.set("n", "<leader>m", require("treesj").toggle)

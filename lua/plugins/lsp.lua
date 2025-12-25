@@ -29,6 +29,8 @@ return {
             },
           },
         },
+        -- tsgo = {},
+        -- vtsls = false,
       },
     },
   },

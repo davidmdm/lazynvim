@@ -20,3 +20,10 @@ vim.keymap.set("n", "<leader>m", require("treesj").toggle)
 vim.keymap.set("n", "<leader>M", function()
   require("treesj").toggle({ split = { recursive = true } })
 end)
+
+vim.keymap.set(
+  "n",
+  "<leader>gt",
+  "<cmd> Gitsigns toggle_current_line_blame <CR>",
+  { desc = "toggle current line blame" }
+)

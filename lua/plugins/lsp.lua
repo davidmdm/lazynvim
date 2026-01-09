@@ -29,7 +29,7 @@ return {
             },
           },
         },
-        -- tsgo = {},
+        tsgo = false,
         -- vtsls = false,
       },
     },

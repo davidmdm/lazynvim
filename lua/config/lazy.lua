@@ -69,3 +69,12 @@ require("lazy").setup({
 })
 
 vim.lsp.enable("cue")
+
+vim.filetype.add({
+  extension = {
+    caddy = "caddy",
+  },
+  filename = {
+    Caddyfile = "caddy",
+  },
+})

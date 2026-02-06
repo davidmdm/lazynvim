@@ -25,7 +25,14 @@ return {
         yamlls = {
           settings = {
             yaml = {
-              customTags = { "!lock", "!local" },
+              customTags = {
+                "!lock scalar",
+                "!lock sequence",
+                "!lock mapping",
+                "!local scalar",
+                "!local sequence",
+                "!local mapping",
+              },
             },
           },
         },

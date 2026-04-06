@@ -37,7 +37,7 @@ return {
             },
           },
         },
-        tsgo = false,
+        -- tsgo = false,
         -- vtsls = false,
       },
     },

@@ -9,3 +9,4 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
 vim.g.lazyvim_picker = "snacks"
+-- vim.g.lazyvim_ts_lsp = "tsgo"

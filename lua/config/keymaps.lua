@@ -5,8 +5,14 @@
 --
 
 vim.keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <CR>", { desc = "live grep" })
+vim.keymap.set(
+  "n",
+  "<leader>cw",
+  "<cmd>lua Snacks.picker.diagnostics({severity = 'error'}) <CR>",
+  { desc = "workspace error diagnostics" }
+)
 
-vim.keymap.set("n", "<leader>cw", "<cmd>lua Snacks.picker.diagnostics() <CR>", { desc = "workspace diagnostics" })
+vim.keymap.set("n", "<leader>cW", "<cmd>lua Snacks.picker.diagnostics() <CR>", { desc = "workspace all diagnostics" })
 vim.keymap.set("n", "<leader>gB", "<cmd>lua Snacks.picker.git_branches() <CR>", { desc = "git branches" })
 
 vim.keymap.set("i", "<C-h>", "<Left>", { desc = "Move left" })

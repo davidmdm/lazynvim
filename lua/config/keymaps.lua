@@ -20,6 +20,11 @@ vim.keymap.set("i", "<C-j>", "<Down>", { desc = "Move down" })
 vim.keymap.set("i", "<C-k>", "<Up>", { desc = "Move up" })
 vim.keymap.set("i", "<C-l>", "<Right>", { desc = "Move right" })
 
+vim.keymap.set("n", "<Left>", "<NOP>", { desc = "no-op" })
+vim.keymap.set("n", "<Down>", "<NOP>", { desc = "no-op" })
+vim.keymap.set("n", "<Up>", "<NOP>", { desc = "no-op" })
+vim.keymap.set("n", "<Right>", "<NOP>", { desc = "no-op" })
+
 vim.keymap.set("t", "<C-x>", [[<C-\><C-n>]])
 
 vim.keymap.set("n", "<leader>m", require("treesj").toggle)

@@ -22,6 +22,7 @@ return {
         json5 = { "prettier" },
         html = { "prettier" },
         go = { "goimports", "gofumpt" },
+        python = { "ruff_format" },
         cue = { "cue_fmt" },
         caddy = { "caddy" },
       },

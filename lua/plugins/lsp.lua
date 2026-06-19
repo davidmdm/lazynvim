@@ -1,6 +1,9 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    init = function()
+      vim.lsp.enable("cue")
+    end,
     opts = {
       diagnostics = {
         virtual_text = false,

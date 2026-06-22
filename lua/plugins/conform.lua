@@ -25,6 +25,7 @@ return {
         python = { "ruff_format" },
         cue = { "cue_fmt" },
         caddy = { "caddy" },
+        markdown = { "prettier" },
       },
     }
     return opts

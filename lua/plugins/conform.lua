@@ -26,6 +26,7 @@ return {
         cue = { "cue_fmt" },
         caddy = { "caddy" },
         markdown = { "prettier" },
+        zig = { "zigfmt" },
       },
     }
     return opts

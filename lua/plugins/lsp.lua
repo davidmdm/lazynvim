@@ -46,8 +46,13 @@ return {
             },
           },
         },
-        -- tsgo = false,
-        -- vtsls = false,
+        -- nvim-lspconfig deprecated `tsgo` into `tsc`, whose cmd resolver prefers a
+        -- project-local node_modules/.bin/tsc. Classic tsc (TS 5.x) doesn't support
+        -- `--lsp` and exits 1, so force the actual tsgo binary.
+        tsgo = {
+          cmd = { "tsgo", "--lsp", "--stdio" },
+        },
+        -- vtsls = true,
       },
     },
   },

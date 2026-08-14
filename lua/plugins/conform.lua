@@ -15,20 +15,27 @@ return {
         lua = { "stylua" },
         fish = { "fish_indent" },
         sh = { "shfmt" },
-        javascript = { "prettier" },
-        typescript = { "prettier" },
-        yaml = { "prettier" },
-        json = { "prettier" },
-        json5 = { "prettier" },
-        html = { "prettier" },
         go = { "goimports", "gofumpt" },
         python = { "ruff_format" },
         cue = { "cue_fmt" },
         caddy = { "caddy" },
-        markdown = { "prettier" },
         zig = { "zigfmt" },
       },
     }
+
+    for _, ft in ipairs({
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "yaml",
+      "json",
+      "json5",
+      "html",
+      "markdown",
+    }) do
+      opts.formatters_by_ft[ft] = { "prettier" }
+    end
     return opts
   end,
 }

@@ -38,3 +38,18 @@ vim.keymap.set(
   "<cmd> Gitsigns toggle_current_line_blame <CR>",
   { desc = "toggle current line blame" }
 )
+
+local function yank_path(modifier)
+  return function()
+    local path = vim.fn.expand("%" .. modifier)
+    if path == "" then
+      vim.notify("buffer has no file path", vim.log.levels.WARN)
+      return
+    end
+    vim.fn.setreg("+", path)
+    vim.notify(path, vim.log.levels.INFO, { title = "copied" })
+  end
+end
+
+vim.keymap.set("n", "<leader>fy", yank_path(":."), { desc = "yank relative file path" })
+vim.keymap.set("n", "<leader>fY", yank_path(":p"), { desc = "yank absolute file path" })

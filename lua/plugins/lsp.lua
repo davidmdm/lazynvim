@@ -19,10 +19,20 @@ return {
           },
         },
         zls = {
-          enable_build_on_save = true,
+          settings = {
+            zls = {
+              enable_build_on_save = true,
+            },
+          },
         },
         gopls = {
-          analyses = {},
+          settings = {
+            gopls = {
+              analyses = {
+                embedlit = false,
+              },
+            },
+          },
         },
         cue = {},
         yamlls = {

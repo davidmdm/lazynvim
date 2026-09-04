@@ -56,13 +56,13 @@ return {
             },
           },
         },
-        -- nvim-lspconfig deprecated `tsgo` into `tsc`, whose cmd resolver prefers a
-        -- project-local node_modules/.bin/tsc. Classic tsc (TS 5.x) doesn't support
-        -- `--lsp` and exits 1, so force the actual tsgo binary.
-        tsgo = {
-          cmd = { "tsgo", "--lsp", "--stdio" },
-        },
-        -- vtsls = true,
+        -- TypeScript: `tsc` (TS 7 native, mason package `tsc`) is the only TS server.
+        -- mason-lspconfig auto-enables every installed package, so `tsgo` and `vtsls`
+        -- are pinned off here to keep a second client from attaching to the same
+        -- buffers and duplicating diagnostics.
+        tsc = {},
+        tsgo = false,
+        vtsls = false,
       },
     },
   },
